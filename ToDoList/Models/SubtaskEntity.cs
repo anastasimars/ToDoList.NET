@@ -2,7 +2,7 @@
 
 namespace ToDoList
 {
-    public class Subtask
+    public class SubtaskEntity
     {
         public long Id { get; set; }
         [Column("subtask_title")]
@@ -10,10 +10,10 @@ namespace ToDoList
         public bool Status { get; set; }
         public long TaskId { get; set; }
         [ForeignKey("TaskId")]
-        public Task Task { get; set; }
+        public TaskEntity Task { get; set; }
         
-        public Subtask(string SubtaskTitle, bool Status,
-            Task task) {
+        public SubtaskEntity(string SubtaskTitle, bool Status,
+            TaskEntity task) {
             ArgumentNullException.ThrowIfNull(task);
             this.SubtaskTitle = SubtaskTitle;
             this.Status = Status;
