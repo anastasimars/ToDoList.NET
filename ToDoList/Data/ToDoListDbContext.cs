@@ -4,6 +4,7 @@ namespace ToDoList.Data
 {
     public class ToDoListDbContext : DbContext
     {
+        
         public ToDoListDbContext(DbContextOptions<ToDoListDbContext> options) 
             : base(options)
         {
@@ -20,5 +21,6 @@ namespace ToDoList.Data
                 .HasForeignKey(s => s.TaskId)
                 .IsRequired();
         }
+
     }
 }
