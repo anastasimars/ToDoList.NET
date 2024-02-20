@@ -20,5 +20,7 @@ namespace ToDoList
             this.Task = task;
             this.TaskId = task.Id;
         }
+
+        public SubtaskEntity(){ }
     }
 }
